@@ -7,8 +7,8 @@
 #
 ################################################################################
 # \copyright
-# Copyright 2025, Cypress Semiconductor Corporation (an Infineon company)
-# SPDX-License-Identifier: Apache-2.0
+# (c) 2025-2026, Infineon Technologies AG, or an affiliate of Infineon
+# Technologies AG.  SPDX-License-Identifier: Apache-2.0
 # 
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -39,6 +39,10 @@ TARGET=KIT_PSE84_EVAL_EPC2
 #
 # See also: CY_COMPILER_PATH below
 TOOLCHAIN=GCC_ARM
+
+# Toolchains supported by this code example. See README.md file.
+# This is used by automated build systems to identify the supported toolchains.
+MTB_SUPPORTED_TOOLCHAINS?=GCC_ARM ARM LLVM_ARM
 
 # Default build configuration. Options include:
 #
