@@ -26,8 +26,14 @@
 # Add shared INCLUDES
 INCLUDES+=../coremark/
 
-# Ignore the CoreMark unrelated folders
-CY_IGNORE+=../../mtb_shared/eembc/coremark/main/barebones/
-CY_IGNORE+=../../mtb_shared/eembc/coremark/main/rtems/
-CY_IGNORE+=../../mtb_shared/eembc/coremark/main/posix/
-CY_IGNORE+=../../mtb_shared/eembc/coremark/main/simple/
+# Ignore entire coremark library from auto-discovery
+CY_IGNORE+=$(SEARCH_coremark)/
+
+# Explicitly add only the needed CoreMark source files
+SOURCES+=$(SEARCH_coremark)/core_list_join.c
+SOURCES+=$(SEARCH_coremark)/core_main.c
+SOURCES+=$(SEARCH_coremark)/core_matrix.c
+SOURCES+=$(SEARCH_coremark)/core_state.c
+SOURCES+=$(SEARCH_coremark)/core_util.c
+
+INCLUDES+=$(SEARCH_coremark)/
